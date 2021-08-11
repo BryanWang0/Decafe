@@ -1,0 +1,246 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+<div id = 'pgzero'>
+  <img src="./1.svg" alt="OP">
+</div>
+
+<div id = 'pgone'>
+  <img src="./2.svg" alt="SP">
+</div>
+
+<div id = "pgtwo">
+  <img src="./3.svg" alt="SP">
+</div>
+
+<div id = "pgthree">
+  <img src="./4.svg" alt="SP">
+</div>
+
+<div id = "pgfour">
+  <img src="./7.svg" alt="SP">
+</div>
+
+<div id = "pgfive">
+  <img src="./9.svg" alt="SP">
+</div>
+
+<div id = "pgsix">
+  <img src = "./10.svg" alt = "FP">
+</div>
+
+
+
+
+
+
+
+<html>
+  <div id = 'zeroItem'>
+    <a type="anchor" id = 'checkzero'>点  击  定  制  您  的  睡  眠  改  善  方  案</a>
+  <div>
+
+  <div id = 'firItem'>
+    <button type="button" id = 'checkfir'>确 认</button>
+    <textarea placeholder = "请输入你的体重（kgs）" id="floatingTextarea"></textarea>
+  </div>
+
+  <div id = 'secItem'>
+    <label id = "initialLabel"></label>
+    <a type="anchor" id = 'checkSec'>点  击  继  续</a>
+  </div>
+
+  <div id = 'thiItem'>
+    <select id = Timeform class="form-select" aria-label="Default select example">
+      <option selected>Choose the time to sleep</option>
+      <option value="9">Nine</option>
+      <option value="10">Ten</option>
+      <option value="11">Eleven</option>
+      <option value="12">Twelve</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <textarea placeholder = "请输入你的年龄" id="thiFloatingTAage"></textarea>
+    <textarea placeholder = "请输入你的体重" id="thiFloatingTAweight"></textarea>
+    <textarea placeholder = "请填写以下选择符合你的症状的数量" id="thiFloatingTAn"></textarea>
+    <textarea placeholder = "请填写以下选择符合你的症状的数量" id="thiFloatingTAaft"></textarea>
+    <button type="button" id = 'checkFor'>确 认</button>
+  </div>
+  <div id = 'forItem'>
+    <label id = forLabel></label>
+    <button type="button" id = 'checkFifth'>更 多 结 果</button>
+  </div>
+  <div id = 'fifItem'>
+      
+  </div>
+
+  
+    <style>
+      #checkfir {
+        position: absolute;
+        font-size: 250%;
+        font-family:Arial, Helvetica, sans-serif;
+        top: 700px;
+        right: 70px;
+        width: 200px;
+        height: 100px;
+      }
+      #floatingTextarea{  
+          position: absolute;  
+          top: 600px;
+          width: 300px;
+          height: 100px;
+          left: 30vw;
+          border-radius: 2px;
+          border-width: 2px;    
+             
+      }
+      #checkzero{
+        font-size: 250%;
+        color: white;
+        position: absolute;  
+          top: 1000px;
+          width: 300px;
+          height: 100px;
+          left: 40vw;
+      }
+      #secTextarea{
+        position: absolute;  
+          top: 1200px;
+          width: 300px;
+          height: 100px;
+          left: 10vw;
+          border-radius: 2px;
+          border-width: 2px;   
+      }
+      #checkSec{
+        font-size: 250%;
+        color: white;
+        position: absolute;  
+          bottom:50px;
+          width: 300px;
+          height: 100px;
+          left: 40vw;
+      }
+      #Timeform
+      {
+        position: absolute;
+        font-size: 100%;
+        font-family:Arial, Helvetica, sans-serif;
+        top: 800px;
+        right: 500px;
+        width: 400px;
+        height: 100px;
+      }
+      #thiFloatingTAage
+      {
+        position: absolute;  
+          top: 530px;
+          width: 250px;
+          height: 40px;
+          left: 65vw;
+          border-radius: 2px;
+          border-width: 2px;
+      }
+      #thiFloatingTAn{
+        position: absolute; 
+          top: 1150px;
+          width: 270px;
+          height: 40px;
+          left: 65vw;
+          border-radius: 2px;
+          border-width: 2px;
+      }
+      #thiFloatingTAaft{
+        position: absolute; 
+          top: 1670px;
+          width: 270px;
+          height: 40px;
+          left: 65vw;
+          border-radius: 2px;
+          border-width: 2px;
+      }
+      #checkFor{
+          position: absolute;
+          font-size: 250%;
+          font-family:Arial, Helvetica, sans-serif;
+          bottom: -105px;
+          right: 70px;
+          width: 200px;
+          height: 100px;  
+      }
+      #checkFifth{
+          position: absolute;
+          font-size: 250%;
+          font-family:Arial, Helvetica, sans-serif;
+          bottom: -105px;
+          right: 70px;
+          width: 200px;
+          height: 100px;  
+      }
+      
+  </style>
+  <script>
+    
+    let forItem = document.getElementById('forItem');
+    let label = document.getElementById('forLabel');
+    let zero = document.getElementById('pgzero');
+    let Lkzero = document.getElementById('checkzero');
+    let d = document.getElementById('pgone');
+    let firItem = document.getElementById('firItem');
+    let btnfir = document.getElementById('checkfir');
+    let pg2 = document.getElementById('pgtwo');
+    let Lksec = document.getElementById('checkSec');
+    let secItem = document.getElementById('secItem');
+    let pg3 = document.getElementById('pgthree');
+    let pg4 = document.getElementById('pgfour');
+    let pg5 = document.getElementById('pgfive');
+    let thiItem = document.getElementById('thiItem');
+    let btn4 = document.getElementById('checkFor');
+    
+    
+    firItem.style.display = 'none';
+    secItem.style.display = 'none';
+    thiItem.style.display = 'none';
+    forItem.style.display = 'none';
+    d.style.display = 'none';
+    pg2.style.display = 'none';
+    pg3.style.display = 'none';
+    pg4.style.display = 'none';
+    
+    Lkzero.addEventListener('click', function (event) {
+      zero.style.display = 'none';
+      Lkzero.style.display = 'none';
+      d.style.display = '';
+      firItem.style.display = '';
+    })
+    
+    btnfir.addEventListener('click', function (event) {
+      d.style.display = 'none';
+      firItem.style.display = 'none';
+      pg2.style.display = '';
+      secItem.style.display = '';
+    })
+
+    Lksec.addEventListener('click', function (event) {
+      pg2.style.display = 'none';
+      secItem.style.display = 'none';
+      pg3.style.display = '';
+      thiItem.style.display = '';
+    })
+
+    btn4.addEventListener('click', function(event){
+      pg3.style.display = 'none';
+      thiItem.style.display = 'none';
+      pg4.style.display = '';
+      forItem.style.display = '';
+    })
+
+    btn5.addEventListener('click', function(event){
+      pg4.style.display = 'none';
+      forItem.style.display = 'none';
+      pg5.style.display = '';
+    })
+
+  </script>
+</html>
